@@ -32,7 +32,7 @@ import (
 	"errors"
 )
 
-var Database *mgo.Database
+var Mongo *mgo.Database
 
 func init() {
 	log.Println("Starting Database")
@@ -56,7 +56,7 @@ func init() {
 	}
 	session.SetMode(mgo.Monotonic, true)
 
-	Database = session.DB(dialinfo.Database)
+	Mongo = session.DB(dialinfo.Database)
 
 }
 
